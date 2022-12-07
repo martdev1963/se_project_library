@@ -1,4 +1,12 @@
 /* Add your class here */
+.page {
+  min-width: 1100px;
+  max-width: 1600px;
+  margin: 0 auto;
+  font-family: "Helvetica Neue, Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
 
 .header {
   height: 100vh;
@@ -13,15 +21,23 @@
 
 .nav {
   /* Add flex properties here */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
+  width: 196px;
+  height: 60px;
 }
 
 .nav__links {
   list-style: none;
   padding-left: 0;
   margin-top: 8px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
 }
 
 .nav__link {
@@ -37,16 +53,19 @@
   line-height: 76px;
   font-weight: 500;
   margin: 150px 0 0;
+  max-width: 544px;
 }
 
 .header__description {
   font-size: 20px;
   line-height: 30px;
   margin: 32px 0 0;
+  max-width: 465px;
 }
 
 .header__image {
   /* Write styles here */
+  max-width: 636px;
   z-index: 1;
 }
 
@@ -190,6 +209,8 @@
   font-weight: 500;
   line-height: 30px;
   margin: 0;
+  width: 24px;
+  height: 24px;
 }
 
 .events__description {
@@ -324,6 +345,7 @@
   line-height: 30px;
   font-weight: 500;
   z-index: 1;
+  max-width: 154px;
 }
 
 .about__content {
