@@ -382,6 +382,7 @@
   overflow: hidden;
   position: relative;
   box-sizing: border-box;
+  z-index: 1; /* correction  - z-index adjustment */
 }
 
 .about__title {
@@ -425,7 +426,7 @@
   position: absolute;
   top: -121px;
   left: -91px;
-  z-index: 0;
+  z-index: -1; /* correction  - z-index adjustment */
 }
 
 .footer {
