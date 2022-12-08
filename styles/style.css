@@ -47,6 +47,9 @@
 }
 
 /* Add the hover state styles for .nav__link here */
+.nav__link:hover {
+  color: #1f69c9;
+}
 
 .header__title {
   font-size: 66px;
@@ -67,6 +70,9 @@
   /* Write styles here */
   max-width: 636px;
   z-index: 1;
+  position: absolute;
+  top: 135px;
+  right: 20px;
 }
 
 .header__footer {
@@ -87,6 +93,9 @@
 }
 
 /* Add the hover state styles for .header__link here */
+.header__link:hover {
+  color: #1f69c9;
+}
 
 .header__address {
   margin: 0;
@@ -115,12 +124,24 @@
 }
 
 /* Add the CSS rule for your new class here. Make sure to place it before .card: parents should precede their children */
+.staff__cards {
+  display: flex;
+  max-width: 760px;
+  margin: auto;
+  /*flex-direction: row; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px 40px; /*height and width*/
+  list-style-type: none;
+}
 
 .card {
   background-color: #fff;
   border-radius: 6px;
   padding: 32px 40px 20px 32px;
   box-sizing: border-box;
+  width: 360px;
+  height: 420px;
 }
 
 .card__content {
@@ -224,67 +245,82 @@
 }
 
 /* Add the hover state styles for .events__more here */
+.events__more:hover {
+  color: #1f69c9;
+}
 
 .events__cover {
-  /* flex-grow: 1;
+  flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 780px;
   max-width: 780px;
-  position: relative; */
+  position: relative;
 }
 
 .events__image {
-  /* max-width: 100%; */
+  max-width: 100%;
 }
 
 .person {
-  /* position: absolute;
+  position: absolute;
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 10px; */
+  gap: 10px;
 }
-
+/* task 6 */
 .person_name_feynman {
   /* Use correct values of top/right/bottom/left properties to position the element */
+  right: 490px;
+  top: 2090px;
 }
 
 .person_name_burbidge {
   /* Use correct values of top/right/bottom/left properties to position the element */
+  /* top: 96px; */
+  /* right: 125px; */
+  right: 299px;
+  top: 2210px;
 }
 
 .person_name_cannon {
   /* Use correct values of top/right/bottom/left properties to position the element */
+  right: 370px;
+  top: 2569px;
 }
 
 .person_name_mitchell {
   /* Use correct values of top/right/bottom/left properties to position the element */
+  right: 710px;
+  top: 2490px;
 }
 
 .person_name_tarter {
   /* Use correct values of top/right/bottom/left properties to position the element */
+  right: 690px;
+  top: 2210px;
 }
 
 .person__image {
-  /* max-width: 100%; */
+  max-width: 100%;
 }
 
 .person__image_size_l {
-  /* width: 140px; */
+  width: 140px;
 }
 
 .person__image_size_m {
-  /* width: 100px; */
+  width: 100px;
 }
 
 .person__image_size_s {
-  /* width: 80px; */
+  width: 80px;
 }
 
 .person__caption {
-  /* text-align: center;
+  text-align: center;
   font-size: 14px;
-  margin: 0; */
+  margin: 0;
 }
 
 .membership {
@@ -303,14 +339,18 @@
 }
 
 .membership__steps {
+  display: flex;
   list-style-type: none;
   padding: 0;
   margin: 100px 0 0;
   /* Add styles */
+  gap: 40px;
+  justify-content: space-around;
 }
 
 .step {
   /* Add styles */
+  flex-basis: 220px;
 }
 
 .step__title {
@@ -346,17 +386,25 @@
   font-weight: 500;
   z-index: 1;
   max-width: 154px;
+  position: absolute;
 }
 
 .about__content {
+  display: flex;
+  flex-direction: column;
   font-size: 20px;
   line-height: 30px;
   font-weight: 400;
   max-width: 660px;
+  margin-left: 270px;
+  z-index: 1;
+  position: relative;
 }
 
 .about__paragraph {
   margin: 0;
+  align-items: center;
+  margin-bottom: 32px;
 }
 
 .about__circle {
@@ -364,22 +412,33 @@
   width: 495px;
   height: 495px;
   border-radius: 50%;
+  position: absolute;
+  top: -121px;
+  left: -91px;
+  z-index: 0;
 }
 
 .footer {
   box-sizing: border-box;
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 57px 102px 60px 80px;
 }
 
 .footer__columns {
+  display: flex; /* row layout by default */
 }
 
 .footer__column_content_hours {
+  margin-left: auto; /* pushes it to the right as much as possible */
 }
 
 .footer__column_content_social {
+  margin-left: 100px; /* to place space between the last two columns */
 }
 
 .footer__logo {
+  width: 153px;
 }
 
 .footer__list {
@@ -390,9 +449,17 @@
 }
 
 .footer__list-item {
+  margin-bottom: 16px;
+}
+
+.footer__list-item:last-of-type {
+  /* so theres no space after the last item */
+  margin-bottom: 0;
 }
 
 .footer__column-heading {
+  /* short-hand top horizontal bottom */
+  margin: 0 0 20px;
 }
 
 .footer__column-link {
@@ -400,10 +467,19 @@
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
+  display: flex; /* in order to use align-items property */
+  align-items: center;
 }
 
+.footer__column-link:hover {
+  color: #c1c1c1;
+}
 .footer__social-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px; /* puts space between icon and text */
 }
 
 .footer__copyright {
+  margin: 108px 0 0; /* 108px margin top to push it down */
 }
