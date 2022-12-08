@@ -128,11 +128,11 @@
   display: flex;
   max-width: 760px;
   margin: auto;
-  /*flex-direction: row; */
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px 40px; /*height and width*/
   list-style-type: none;
+  margin-top: 20px; /* just to push the cards down a bit from the staff__subtitle <p> tag */
 }
 
 .card {
@@ -215,6 +215,8 @@
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 12px;
+  width: 24px;
+  height: 24px;
 }
 
 .event-info__icon_type_calendar {
@@ -230,8 +232,6 @@
   font-weight: 500;
   line-height: 30px;
   margin: 0;
-  width: 24px;
-  height: 24px;
 }
 
 .events__description {
