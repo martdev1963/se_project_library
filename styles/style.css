@@ -402,7 +402,7 @@
   line-height: 30px;
   font-weight: 400;
   max-width: 660px;
-  margin-left: 130px;
+  margin-left: 120px; /* correction - adjusted margin-left */
   z-index: 1;
   position: relative;
 }
@@ -450,7 +450,7 @@
 }
 
 .footer__logo {
-  margin-left: 80px;
+  /* correction - removed margin-left: 80px; */
   width: 116px; /* correction 13 - adjusted logo size */
   height: 21px;
 }
@@ -497,6 +497,8 @@
 }
 
 .footer__copyright {
-  margin-left: 80px; /* correction - removed top margin */
-  margin-bottom: 60px;
+  /*correction - removed margin-left: 80px; .footer handles this with padding */
+  /* correction - removed top margin */
+  margin-top: 0; /* correction - reset default margin-top for this <p> element */
+  margin-bottom: 0; /* correction - reset default margin-bottom for this <p> element */
 }
